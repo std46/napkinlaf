@@ -93,8 +93,10 @@ public class NapkinLookAndFeel extends BasicLookAndFeel {
         // Use getPackage() instead of property because property can fail on security check
         Package sysPackage = Runtime.getRuntime().getClass().getPackage();
         String sysVer = sysPackage.getSpecificationVersion();
-        if (sysVer.startsWith("1.5")) {
-            new JLabel();
+        if(sysVer != null){
+            if (sysVer.startsWith("1.5")) {
+                new JLabel();
+            }
         }
     }
 
